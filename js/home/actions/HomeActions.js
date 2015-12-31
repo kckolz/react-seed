@@ -1,4 +1,4 @@
-var WodConstants = require('../constants/WodConstants'),
+var HomeConstants = require('../constants/HomeConstants'),
     Dispatcher = require('../../dispatcher'),
     ActionTypes = HomeConstants.ActionTypes,
     axios = require('axios'),

@@ -33,12 +33,16 @@ var Home = React.createClass({
     });
   },
 
+  renderDate: function() {
+    return <div className={classNames('date')}>
+            Today's date is {this.state.date.format("MMM Do YYYY")}
+           </div>;
+  },
+
   render: function() {
     return (
-      <section id="home-page"}>
-        <div className={classNames('date')}>
-          The current time is {this.state.date}
-        </div>
+      <section id="home-page">
+        {this.renderDate()}
       </section>
     )
   }

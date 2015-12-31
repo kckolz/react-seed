@@ -1,7 +1,7 @@
 var React = require('react'),
     ReactDOM = require('react-dom'),
     App = require('./App.jsx'),
-    Home = require('./wod/components/Home.jsx'),
+    Home = require('./home/components/Home.jsx'),
     NotFound = require('./common/NotFound.jsx'),
     ReactRouter = require('react-router'),
     Router = ReactRouter.Router,

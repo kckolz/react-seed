@@ -6,8 +6,7 @@ var gulp = require('gulp'),
     livereload = require('gulp-livereload'),
     del = require('del'),
     glob = require('glob'),
-    browserifier = require('./browserify'),
-    build = require('./semantic/tasks/build');
+    browserifier = require('./browserify');
 
 var args = require('yargs').alias('P', 'production').argv,
     production = args.production;

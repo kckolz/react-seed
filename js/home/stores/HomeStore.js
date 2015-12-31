@@ -1,5 +1,5 @@
 var Dispatcher = require('../../dispatcher');
-var HomeConstants = require('../constants/WodConstants');
+var HomeConstants = require('../constants/HomeConstants');
 var EventEmitter = require('events').EventEmitter;
 var assign = require('object-assign');
 var moment = require('moment');
