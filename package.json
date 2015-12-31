@@ -1,0 +1,90 @@
+{
+  "name": "cross-track",
+  "version": "0.0.1",
+  "description": "React + Flux Web Application for Cross Track",
+  "repository": "https://github.com/kckolz/cross-track",
+  "main": "js/app.js",
+  "license": "BSD-2-Clause",
+  "dependencies": {
+    "axios": "^0.7.0",
+    "browserify": "^9.0.4",
+    "classnames": "^2.1.3",
+    "factor-bundle": "^2.4.1",
+    "flux": "^2.0.0",
+    "history": "1.13.x",
+    "jquery": "^2.1.4",
+    "keymirror": "~0.1.0",
+    "moment": "^2.10.6",
+    "object-assign": "^1.0.0",
+    "q": "^1.4.1",
+    "react": "^0.14.3",
+    "react-datepicker": "^0.15.2",
+    "react-dom": "^0.14.3",
+    "react-intl": "1.2.0",
+    "react-router": "1.0.2",
+    "react-semantify": "^0.4.1",
+    "react-timer-mixin": "^0.13.3",
+    "uglifyify": "^3.0.1",
+    "yargs": "^3.15.0"
+  },
+  "devDependencies": {
+    "babelify": "^6.1.2",
+    "better-console": "^0.2.4",
+    "browserify-shim": "^3.8.11",
+    "del": "^1.1.1",
+    "envify": "^3.0.0",
+    "glob": "^5.0.14",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^2.3.1",
+    "gulp-cache": "^0.4.1",
+    "gulp-chmod": "^1.2.0",
+    "gulp-clone": "^1.0.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-concat-css": "^2.2.0",
+    "gulp-copy": "0.0.2",
+    "gulp-dedupe": "0.0.2",
+    "gulp-flatten": "^0.1.0",
+    "gulp-header": "^1.7.1",
+    "gulp-help": "^1.6.0",
+    "gulp-if": "^1.2.5",
+    "gulp-less": "^3.0.3",
+    "gulp-livereload": "^3.8.1",
+    "gulp-minify-css": "^1.2.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-plumber": "^1.0.1",
+    "gulp-print": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-replace": "^0.5.3",
+    "gulp-rtlcss": "^0.1.4",
+    "gulp-uglify": "^1.2.0",
+    "gulp-util": "^3.0.6",
+    "gulp-watch": "^4.3.3",
+    "jest-cli": "^0.4.3",
+    "lodash": "3.10.0",
+    "mkdirp": "^0.5.1",
+    "npm-css": "^0.2.3",
+    "reactify": "^0.15.2",
+    "require-dot-file": "^0.4.0",
+    "run-sequence": "^1.1.5",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^2.1.1",
+    "yamljs": "^0.2.4"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Kevin Kolz",
+  "browserify": {
+    "transform": [
+      "reactify",
+      "envify",
+      "browserify-shim"
+    ]
+  },
+  "browserify-shim": {
+    "$": "global:jQuery"
+  },
+  "jest": {
+    "rootDir": "./js"
+  }
+}
