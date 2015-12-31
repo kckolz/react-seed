@@ -10,13 +10,14 @@ var Home = React.createClass({
 
   getInitialState: function() {
     return {
-      date: HomeStore.getDate()
+      date: HomeStore.getDate(),
+      weather: HomeStore.getWeather()
     }
   },
 
   componentWillMount: function () {
     // When this component is loaded, fetch initial data
-
+    HomeActions.getWeather();
   },
 
   componentDidMount: function() {
@@ -29,7 +30,8 @@ var Home = React.createClass({
 
   _onChange: function() {
     this.setState({
-      date: HomeStore.getDate()
+      date: HomeStore.getDate(),
+      weather: HomeStore.getWeather()
     });
   },
 
@@ -39,10 +41,20 @@ var Home = React.createClass({
            </div>;
   },
 
+  renderWeather: function() {
+    if(this.state.weather) {
+      return <div className={classNames('weather')}>
+              The current temperature in Charleston is {this.state.weather.main.temp}&deg; Fahrenheit
+             </div>;
+    }
+    
+  },
+
   render: function() {
     return (
       <section id="home-page">
         {this.renderDate()}
+        {this.renderWeather()}
       </section>
     )
   }

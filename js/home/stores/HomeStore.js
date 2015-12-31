@@ -6,9 +6,10 @@ var moment = require('moment');
 var ActionTypes = HomeConstants.ActionTypes;
 var CHANGE_EVENT = 'change';
 
-var _date = moment();
+var _date = moment(),
+    _weather = null;
 
-var WodStore = assign({}, EventEmitter.prototype, {
+var HomeStore = assign({}, EventEmitter.prototype, {
 
   emitChange: function() {
     this.emit(CHANGE_EVENT);
@@ -24,16 +25,25 @@ var WodStore = assign({}, EventEmitter.prototype, {
 
   getDate: function() {
     return _date;
+  },
+
+  getWeather: function() {
+    return _weather;
   }
 });
 
-WodStore.dispatchToken = Dispatcher.register(function(action) {
+HomeStore.dispatchToken = Dispatcher.register(function(action) {
 
   switch(action.type) {
 
     case ActionTypes.UPDATE_DATE:
       _date = action.data
-      WodStore.emitChange();
+      HomeStore.emitChange();
+      break;
+
+    case ActionTypes.GET_WEATHER:
+      _weather = action.data
+      HomeStore.emitChange();
       break;
 
     default:
@@ -42,4 +52,4 @@ WodStore.dispatchToken = Dispatcher.register(function(action) {
 
 });
 
-module.exports = WodStore;
+module.exports = HomeStore;
