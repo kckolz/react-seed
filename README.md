@@ -7,7 +7,7 @@ This is a [React](https://facebook.github.io/react/) + [Flux](https://facebook.g
 You must have [npm](https://www.npmjs.org/) installed on your computer.
 From the root project directory run these commands from the command line:
 
-`npm install`
+`npm install`  
 `gulp build` or `gulp start`
 
 This will perform an initial build or start a watcher process that will
