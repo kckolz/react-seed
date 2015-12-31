@@ -17,14 +17,15 @@ module.exports = {
   },
 
   getWeather: function() {
-    axios.get("http://api.openweathermap.org/data/2.5/weather?q=Charleston,SC&units=imperial&appid=c7169d840d9319518130687bf3dee5cf")
+    let url = "http://api.openweathermap.org/data/2.5/weather?q=Charleston,SC&units=imperial&appid=c7169d840d9319518130687bf3dee5cf"
+    axios.get(url)
     .then(function(response) {
       Dispatcher.dispatch({
         type: ActionTypes.GET_WEATHER,
         data: response.data
       });
     }).catch(function(err) {
-
+      //Handle Error
     })
   }
 };
